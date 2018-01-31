@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=clazz
+comment0.target=void\ markAccessible(java.lang.Class)
+comment0.text=\r\n\ Marks\ the\ given\ level\ as\ accessible.\r\n\ You\ should\ call\ this\ when\ the\ player\ completes\ the\ preceding\ level.\r\n
+comment1.params=clazz
+comment1.target=void\ markInaccessible(java.lang.Class)
+comment1.text=\r\n\ Marks\ the\ given\ level\ as\ inaccessible.\r\n\ This\ might\ apply\ if\ the\ player\ gets\ knocked\ back,\ or\ something,\r\n\ or\ you\ want\ to\ reset\ the\ game\ state.\r\n
+comment2.params=clazz
+comment2.target=boolean\ canAccess(java.lang.Class)
+comment2.text=\r\n\ Determines\ whether\ the\ player\ can\ access\ a\ given\ level.\r\n\ \r\n\ @param\ clazz\r\n\ \ \ \ \ \ the\ clazz\ of\ the\ relevant\ level;\ for\ example,\ {@code\ Level01.class}\r\n\ @return\r\n\ \ \ \ \ \ {@code\ true}\ if\ the\ player\ can\ access\ the\ level,\ or\ {@code\ false}\ otherwise\r\n
+numComments=3

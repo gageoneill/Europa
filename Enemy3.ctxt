@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Enemy3()
+comment0.text=\r\n\ Creates\ a\ new\ enemy,\ setting\ up\ physics.\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Moves\ somewhat\ randomly,\ weighted\ toward\ the\ center\ of\ the\ screen.\r\n\ If\ touching\ a\ player\ shot,\ destroy\ self\ and\ drop\ an\ item.\r\n
+numComments=2

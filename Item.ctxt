@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Item()
+comment0.text=\r\n\ This\ constructor\ just\ sets\ up\ some\ basic\ physics\ settings.\r\n
+comment1.params=
+comment1.target=void\ onCollected()
+comment1.text=\r\n\ This\ method\ will\ be\ called\ when\ the\ item\ is\ picked\ up\ by\ a\ player.\r\n\ You\ can\ add\ stuff\ like\ particle\ effects\ here.\r\n
+comment2.params=baseColor
+comment2.target=void\ launchParticles(java.awt.Color)
+comment2.text=\r\n\ Helper\ method\ to\ launch\ a\ bunch\ of\ particles\ of\ the\ given\ color.\r\n
+numComments=3

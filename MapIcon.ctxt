@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ act()
+comment1.params=diameter\ color\ text\ target\ data
+comment1.target=MapIcon(int,\ java.awt.Color,\ java.lang.String,\ Level,\ PlayerData)
+comment2.params=diameter\ color\ text
+comment2.target=greenfoot.GreenfootImage\ createImage(int,\ java.awt.Color,\ java.lang.String)
+comment2.text=\r\n\ This\ method\ creates\ a\ GreenfootImage\ and\ draws\ the\ button\ image\ on\ it.\r\n
+numComments=3

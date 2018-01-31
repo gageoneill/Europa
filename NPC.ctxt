@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=item
+comment0.target=void\ dropItem(Item)
+comment0.text=\r\n\ Helper\ method\ to\ emit\ an\ item\ at\ the\ current\ location.\r\n\ For\ example,\ invoke\ as\ "dropItem(new\ Grow())"\ to\ drop\ a\ growth\ powerup.\r\n\ \r\n\ @param\ item\r\n\ \ \ \ \ \ the\ item\ to\ drop\r\n
+numComments=1

@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ act()
+comment0.text=\r\n\ Acts\ according\ to\ standard\ physics,\ or\ deletes\ itself\ when\ its\ life\ has\ expired.\r\n
+numComments=1

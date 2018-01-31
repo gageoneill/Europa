@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=world
+comment0.target=FadeManager(greenfoot.World)
+comment0.text=\r\n\ Creates\ a\ fade\ manager\ associated\ with\ the\ given\ world.\r\n\ \r\n\ @param\ world\r\n\ \ \ \ \ \ the\ world\ to\ fade\ in\ and\ out\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ This\ method\ should\ be\ called\ once\ per\ frame\ by\ the\ world\ associated\ with\ this\ FadeManager.\r\n
+comment2.params=duration
+comment2.target=void\ fadeIn(int)
+comment2.text=\r\n\ Begins\ fading\ in\ the\ screen\ over\ the\ given\ number\ of\ frames.\r\n\ \r\n\ @param\ duration\r\n\ \ \ \ \ \ the\ duration\ of\ the\ fade\ to\ begin\r\n
+comment3.params=duration
+comment3.target=void\ fadeOut(int)
+comment3.text=\r\n\ Begins\ fading\ out\ the\ screen\ over\ the\ given\ number\ of\ frames.\r\n\ \r\n\ @param\ duration\r\n\ \ \ \ \ \ the\ duration\ of\ the\ fade\ to\ begin\r\n
+comment4.params=
+comment4.target=void\ cutIn()
+comment4.text=\r\n\ Immediately\ fades\ the\ screen\ in\ entirely;\ i.e.,\ the\ screen\ will\ not\ be\ covered.\r\n
+comment5.params=
+comment5.target=void\ cutOut()
+comment5.text=\r\n\ Immediately\ fades\ the\ screen\ out\ entirely;\ i.e.,\ the\ screen\ will\ appear\ black.\r\n
+comment6.params=
+comment6.target=boolean\ isFadedIn()
+comment6.text=\r\n\ Determines\ if\ the\ screen\ was\ fading\ in\ and\ has\ now\ finished.\r\n\ \r\n\ @return\r\n\ \ \ \ \ \ whether\ the\ screen\ was\ fading\ in\ and\ has\ now\ finished\r\n
+comment7.params=
+comment7.target=boolean\ isFadedOut()
+comment7.text=\r\n\ Determines\ if\ the\ screen\ was\ fading\ out\ and\ has\ now\ finished.\r\n\ \r\n\ @return\r\n\ \ \ \ \ \ whether\ the\ screen\ was\ fading\ out\ and\ has\ now\ finished\r\n
+numComments=8
