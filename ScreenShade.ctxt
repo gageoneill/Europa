@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.params=world
-comment0.target=void\ addedToWorld(greenfoot.World)
-comment1.params=opacity
-comment1.target=void\ setOpacity(int)
-comment1.text=\r\n\ Sets\ the\ opacity\ level\ of\ this\ image;\ 255\ is\ fully\ black,\ and\ 0\ is\ invisible.\r\n\ \r\n\ @param\ opacity\r\n\ \ \ \ \ \ the\ new\ opacity\ value\r\n
-numComments=2
