@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="110.49609"
+   height="140.23904"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="key_d.svg"
+   inkscape:export-filename="/home/wchargin/Dropbox/School/14/cpe123/game/assets/keys/key_d.png"
+   inkscape:export-xdpi="56.298721"
+   inkscape:export-ydpi="56.298721">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.2773438"
+     inkscape:cx="153.37717"
+     inkscape:cy="105.09521"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1030"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-138.71356,-24.150234)">
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#cccccc;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985"
+       width="92"
+       height="92"
+       x="146.41087"
+       y="47.876484"
+       inkscape:export-filename="/home/wchargin/Dropbox/School/14/cpe123/game/assets/keys/key_d.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3755"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#404040;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="matrix(2.1919577,0,0,2.1919577,-182.44473,-60.784753)"
+       inkscape:export-filename="/home/wchargin/Dropbox/School/14/cpe123/game/assets/keys/key_d.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><flowRegion
+         id="flowRegion3757"><rect
+           id="rect3759"
+           width="40.282871"
+           height="46.780884"
+           x="150.5"
+           y="50.112183"
+           style="text-align:center;text-anchor:middle;fill:#404040;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara3761"
+         style="font-size:32.84735107px;text-align:center;text-anchor:middle;fill:#404040;fill-opacity:1;font-family:Ubuntu Sans;-inkscape-font-specification:Ubuntu Sans">W</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="192.54819"
+       y="41.962734"
+       id="text3311"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3313"
+         x="192.54819"
+         y="41.962734"
+         style="font-size:24px;text-align:center;text-anchor:middle">PRESS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="138.78387"
+       y="164.04944"
+       id="text3315"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3317"
+         x="138.78387"
+         y="164.04944"
+         style="font-size:24px">TO MOVE</tspan></text>
+  </g>
+</svg>
