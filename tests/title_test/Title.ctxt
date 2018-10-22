@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=world
+comment0.target=void\ addedToWorld(greenfoot.World)
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\n\ Fade\ in\ and\ move\ up.\n
+comment2.params=x\ y
+comment2.target=void\ setLocation(int,\ int)
+numComments=3

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=w
+comment0.target=void\ addedToWorld(greenfoot.World)
+comment1.params=x\ y
+comment1.target=void\ setLocation(int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=speed
+comment3.target=void\ setSpeed(double)
+numComments=4

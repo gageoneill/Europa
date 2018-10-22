@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=player
+comment0.target=void\ onCollisionWith(Player)
+comment1.params=
+comment1.target=void\ act()
+numComments=2

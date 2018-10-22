@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=target
+comment0.target=TitleFlare(Title)
+comment0.text=\n\ Creates\ a\ title\ flare\ that\ tracks\ the\ given\ title.\n
+comment1.params=world
+comment1.target=void\ addedToWorld(greenfoot.World)
+comment2.params=
+comment2.target=void\ goToTitle()
+comment2.text=\n\ Moves\ this\ object\ to\ the\ title\ object\ it\ is\ following.\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Moves\ to\ the\ title\ object\ and\ fades\ in.\n
+comment4.params=
+comment4.target=void\ fade()
+comment4.text=\n\ Adjusts\ the\ transparency\ of\ this\ object\ to\ create\ a\ "fading"\ effect.\n
+numComments=5

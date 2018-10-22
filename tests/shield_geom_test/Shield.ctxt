@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=size
+comment0.target=Shield(int)
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ deflectObjects()
+comment3.params=projectile
+comment3.target=boolean\ isInRange(Projectile)
+comment4.params=projectile
+comment4.target=void\ processCollision(Projectile)
+comment5.params=
+comment5.target=void\ animateSize()
+comment6.params=
+comment6.target=void\ paintImage()
+numComments=7

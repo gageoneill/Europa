@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=color\ radius
+comment0.target=Microbe(java.awt.Color,\ int)
+comment1.params=
+comment1.target=Microbe()
+comment2.params=
+comment2.target=void\ updateImage()
+comment3.params=color
+comment3.target=void\ setColor(java.awt.Color)
+comment4.params=
+comment4.target=java.awt.Color\ getColor()
+comment5.params=radius
+comment5.target=void\ setRadius(int)
+comment6.params=
+comment6.target=int\ getRadius()
+numComments=7

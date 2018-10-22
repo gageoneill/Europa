@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=speed\ angleDegrees
+comment0.target=void\ setVelocityPolar(double,\ double)
+comment1.params=angleDegrees
+comment1.target=void\ setHeading(double)
+comment1.text=\n\ Sets\ the\ velocity\ by\ keeping\ the\ same\ speed\ but\ moving\ at\ a\ new\ angle.\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkBoundary()
+comment4.params=x\ y
+comment4.target=void\ setLocation(int,\ int)
+comment5.params=x\ y
+comment5.target=void\ setLocation(double,\ double)
+comment6.params=
+comment6.target=void\ integratePhysics()
+comment7.params=
+comment7.target=double\ getVelocityX()
+comment8.params=
+comment8.target=double\ getVelocityY()
+numComments=9

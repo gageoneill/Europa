@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=world
+comment0.target=void\ addedToWorld(greenfoot.World)
+comment1.params=transparency
+comment1.target=void\ setTransparency(int)
+numComments=2
