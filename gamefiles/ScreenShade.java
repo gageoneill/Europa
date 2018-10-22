@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Color;
 
 /**
  * A fully black object that can fade in and out for World transitions.

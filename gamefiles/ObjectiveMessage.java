@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
+import java.awt.Color;
 
 /**
  * A message that appears on the screen, displays an objective, and fades out.

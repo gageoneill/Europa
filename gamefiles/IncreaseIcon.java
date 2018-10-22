@@ -5,14 +5,12 @@ import java.awt.RenderingHints;
 import java.awt.BasicStroke;
 
 /**
- * This is a button that, when clicked, opens a given level.
+ * Write a description of class IncreaseIcon here.
  * 
- * @author William Chargin
- * 
- * @version 14 October 2014: Add integration with PlayerData, add icon stroke.
- * @version 9 October 2014: Initial version
+ * @author Mateus Seehagen Rodrigues 
+ * @version November 19th 2014
  */
-public class MapIcon extends Actor
+public class IncreaseIcon extends Actor
 {
     // Parameters for button appearance
     private int diameter;
@@ -27,20 +25,38 @@ public class MapIcon extends Actor
     private GreenfootImage imgDisabled;
         
     /**
-     * The world to switch to when clicked.
+     * The number of upgrades avaliable.
      */
-    private Level target;
+    private int upgradeType;
     
     /**
-     * The player data to use to detect if the user can click this.
+     * The player data to use to upgrade the main character.
      */
     private PlayerData data;
     
+    /**
+     * Act - do whatever the IncreaseIcon wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act()
     {
-        // If the level is inaccessible, mark it as gray.
-        if (!data.canAccess(target.getClass()))
+        // If there is upgrade points
+        if (data.getUpgradePoints() <= 0) 
         {
+            setImage(imgDisabled);
+            return;
+        }
+        
+        // or if have 5 or more points in that atributte       
+        if (this.upgradeType == 101 && data.getPointsSpeed() >= 5){
+            setImage(imgDisabled);
+            return;
+        }
+        if (this.upgradeType == 102 && data.getPointsShotRange() >= 5){
+            setImage(imgDisabled);
+            return;
+        }
+        if (this.upgradeType == 103 && data.getPointsRecoil() >= 5){
             setImage(imgDisabled);
             return;
         }
@@ -56,8 +72,14 @@ public class MapIcon extends Actor
             // If the mouse is also pressed...
             if (Greenfoot.mousePressed(null))
             {
-                // ...then switch world.
-                Greenfoot.setWorld(target);
+                // ... then upgrade.
+                if(this.upgradeType == 101){
+                    data.upgradeSpeed();
+                } else if(this.upgradeType == 102){
+                    data.upgradeShotRange();
+                } else if(this.upgradeType == 103){
+                    data.upgradeRecoil();
+                }
             }
         }
         else
@@ -65,23 +87,23 @@ public class MapIcon extends Actor
             // Mouse is not over the button.
             setImage(imgOut);
         }
-    }
+    }    
     
-    public MapIcon(int diameter, Color color, String text, Level target, PlayerData data)
-    {
+    public IncreaseIcon(int diameter, Color color, PlayerData data, int upgradeType) {
         // Set fields.
         this.diameter = diameter;
         this.color = color;
         this.highlightColor = color.darker();
-        this.text = text;
-        this.target = target;
+        this.text = "+";
         this.data = data;
+        this.upgradeType = upgradeType;
         
         // Create the three images: mouse out, mouse over, and disabled.
         imgOut = createImage(diameter, color, text);
         imgOver = createImage(diameter, highlightColor, text);
         imgDisabled = createImage(diameter, disabledColor, text);
     }
+    
     
     /**
      * This method creates a GreenfootImage and draws the button image on it.
@@ -108,7 +130,7 @@ public class MapIcon extends Actor
         g2d.drawOval(strokeWidth / 2, strokeWidth / 2, diameter - strokeWidth, diameter - strokeWidth);
         
         // Set the font size, and determine what size the text will be.
-        final float fontFactor = 0.55f;
+        final float fontFactor = 0.6f;
         g2d.setFont(image.getFont().deriveFont(diameter * fontFactor));
         final int textWidth = g2d.getFontMetrics().stringWidth(text);
         final int textHeight = g2d.getFontMetrics().getAscent();

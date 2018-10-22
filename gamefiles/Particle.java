@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.Random;
-
+import java.awt.Color;
 
 /**
  * Blatant eye-candy. Emitted from items when collected.
@@ -32,6 +32,7 @@ public class Particle extends PhysicsObject
         
         // Set up physics.
         setLinearDamping(0.95);
+        setNoBounds(true);
     }
     
     /**
@@ -59,7 +60,7 @@ public class Particle extends PhysicsObject
         
         // The parameter sigma controls the color spread.
         // If this is too high, you get a bunch of random colors.
-        final double sigma = 0.15;
+        final double sigma = 0.05;
         
         // Do the calculation.
         return (int) Math.min(255, Math.round(component * Math.exp(sigma * RANDOM.nextGaussian())));

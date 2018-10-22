@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Color;
 
 /**
  * Makes the user shrink.
@@ -15,5 +15,6 @@ public class Shrink extends Item
     {
         // Launch red-ish particles.
         launchParticles(new Color(200, 30, 30, 150));
+        new GreenfootSound("powerdown.wav").play();
     }
 }

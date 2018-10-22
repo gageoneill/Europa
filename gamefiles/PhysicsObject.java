@@ -1,6 +1,6 @@
 import greenfoot.Actor;
 import greenfoot.World;
-
+import java.util.List;
 /**
  * A {@code PhysicsObject} is an {@link Actor} that is equipped with some basic
  * physical interactions. It has velocity and angular velocity, which control
@@ -22,6 +22,14 @@ public class PhysicsObject extends Actor
     ///////////////////////////////////////////////////////////////////////////
     // Fields
     ///////////////////////////////////////////////////////////////////////////
+    
+    
+    private int stun = 0;
+    private int maxStun = 30;
+    public void stun()
+    {
+        stun = maxStun;
+    }
     
     /**
      * The x-component of this object's velocity (in px/frame).
@@ -81,6 +89,12 @@ public class PhysicsObject extends Actor
      * because Actor only uses int.
      */
     private double theta;
+    
+    private double lastX;
+    private double lastY;
+    private double lastTheta;
+    
+    private boolean noBounds = false;
     
     ///////////////////////////////////////////////////////////////////////////
     // Overrides for methods in Actor that only support int
@@ -480,17 +494,126 @@ public class PhysicsObject extends Actor
         }
     }
     
+    public void trackPlayer()//Written by Clay Asato //edited by Jaskaran Buttar
+    {
+        if (getWorld() == null || stun > 0)
+        {
+            return;
+        }
+        Level lv = (Level)getWorld();       
+        Player p = lv.getPlayer();
+        
+        if(lv.getPlayer() != null)
+        {
+            int playerXLocation = p.getX();
+            int playerYLocation = p.getY();
+            turnTowards(playerXLocation, playerYLocation);
+            //  int xOffset = getX()-playerXLocation;
+            //  int yOffset = getY()-playerYLocation;
+            //  int heading = getRotation();
+            increaseVelocityPolar(.2, this.getRotation());
+            
+            List l = getWorld().getObjects(NPC.class);
+            for ( Object o : l)
+            {
+                NPC npc = (NPC)o;
+                if (this == npc)
+                {
+                    continue;
+                }
+                double dx = this.getX() - npc.getX();
+                double dy = this.getY() - npc.getY();
+                double dz = Math.hypot(dx, dy);
+                double theta = Math.toDegrees(Math.atan2(dy, dx));
+                if ( dz < 80)
+                {
+                    increaseVelocityPolar((80.0-dz)/80.0,theta);
+                }
+            }
+        }
+        
+        
+    }
+    
+    public double getLastX()
+    {
+        return lastX;
+    }
+    public double getLastY()
+    {
+        return lastY;
+    }
+    public double getLastTheta()
+    {
+        return lastTheta;
+    }
+    
     ///////////////////////////////////////////////////////////////////////////
     // Key Greenfoot methods
     ///////////////////////////////////////////////////////////////////////////
     
     @Override
     public void act() {
+        storeLastCoordinates();
         moveByVelocity();
         applyDamping();
         clampMaxSpeed();
+        boundary();
+        if (--stun < 0)
+        {
+            stun = 0;
+        }
     }
-        
+    
+    private void storeLastCoordinates()
+    {
+        lastX = x;
+        lastY = y;
+        lastTheta = theta;
+    }
+    
+    public void boundary()//Jaskaran Buttar
+    {
+        if (noBounds)
+        {
+            return;
+        }
+        int halfwidth = getImage().getWidth()/2;
+        double x = getVelocityX();
+        double y = getVelocityY();
+        if (getX() < halfwidth) 
+        {
+            setLocation(halfwidth + 1, getY());
+            setVelocity(-x, y);          
+            setRotation(180 - getRotation());
+        }
+        if (getX() > getWorld().getWidth() - halfwidth)
+        {
+            setLocation(getWorld().getWidth() - halfwidth - 1, getY());
+            setVelocity(-x, y);
+            setRotation(180 - getRotation());
+        }
+        int halfheight = getImage().getHeight()/2;
+        if (getY() < halfheight)
+        {
+            setLocation(getX(), halfheight + 1);
+            setVelocity(x, -y);
+            setRotation(180 - getRotation());
+        }
+        if (getY() > getWorld().getHeight() -halfheight)
+        {
+            setLocation(getX(), getWorld().getHeight()-halfheight-1);
+            setVelocity(x, -y);
+            setRotation(180 - getRotation());
+        }
+
+    }
+    
+    public void setNoBounds(boolean noBounds)
+    {
+        this.noBounds = noBounds;
+    }
+     
     @Override
     public void addedToWorld(World w) {
         /*

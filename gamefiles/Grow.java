@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Color;
 
 /**
  * Makes the user grow.
@@ -15,5 +15,6 @@ public class Grow extends Item
     {
         // Launch green-ish particles.
         launchParticles(new Color(30, 220, 30, 150));
+        new GreenfootSound("powerup.wav").play();
     }
 }

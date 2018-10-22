@@ -2,7 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Level01 extends Level
 {
+    //background image cred: http://www.dreamstime.com/royalty-free-stock-photo-winter-ice-background-image2089595
     private Player player;
+    
+    public int playerSize = 0;
     
     /**
      * Constructor for objects of class Level01.
@@ -12,10 +15,13 @@ public class Level01 extends Level
     {
         super(map);
         prepare();
+        sizeGoal = 150;
     }
     
     @Override
     public void prepare() {
+        super.prepare();
+        
         player = new Player();
         addObject(player, 590, 602);
         
@@ -45,6 +51,8 @@ public class Level01 extends Level
         KeyMouse mouse = new KeyMouse();
         addObject(mouse, -100, -100);
         
+        
+        
         ObjectiveMessage objective = new ObjectiveMessage("GROW FOUR SIZES");
         addObject(objective, getWidth() / 2, getHeight() * 7 / 8);
     }
@@ -59,12 +67,44 @@ public class Level01 extends Level
      */
     public void act()
     {
+        super.act();
+        playerSize = player.getSize();
         // When finish T1...
-        if (player.getSize() >= 150)
+        if (playerSize >= sizeGoal)
         {
+            levelComplete = true;
+        }
+        
+        if(goToNext){
             // okay to go to T2.
             getMap().getPlayerData().markAccessible(Level02.class);
             returnToMap();
         }
+        
+    }
+    public int currentSize()
+    {
+        return playerSize;
+    }
+    
+    public double getCompletionPercentage()
+    {
+        return (double)playerSize/sizeGoal;
+    }
+    public int getItemTimer()
+    {
+        return Integer.MAX_VALUE;
+    }   
+    public double getBossHPPercent()
+    {
+        return 0;
+    }
+    public int getMiniBossX()
+    {
+        return 0;
+    }
+    public int getMiniBossY()
+    {
+        return 0;
     }
 }

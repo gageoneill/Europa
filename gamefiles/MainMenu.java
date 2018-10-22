@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MainMenu extends World
 {
-
+    
     /**
      * The object that manages fading in and out of the main menu.
      */
@@ -35,7 +35,13 @@ public class MainMenu extends World
      * the prompt will be added.
      */
     private int promptTimer = 0;
-
+    
+    private boolean musicStarted = false;
+    
+    /**
+     * @author Jaskaran Buttar
+     */
+    private GreenfootSound bkgMusic;//adds music to the main menu
     /**
      * Creates the main menu, adding the title text and planets.
      */
@@ -43,9 +49,13 @@ public class MainMenu extends World
     {
         super(1200, 900, 1, false); 
 
+        Greenfoot.setSpeed(50);
+        
         // Set up the fade manager.
         manager = new FadeManager(this);
         manager.fadeIn(fadeDuration);
+
+        bkgMusic = new GreenfootSound("halo3music.mp3");
 
         // We want to add the title text so that it is at y = 331 when it finishes animating.
         // However, we know that it moves up some from its starting position, so we have to
@@ -66,7 +76,16 @@ public class MainMenu extends World
             TitlePrompt.class
         );
     }
-
+    
+    public void started()
+    {
+        if (!musicStarted)
+        {
+            bkgMusic.playLoop();
+            musicStarted = true;
+        }
+    }
+    
     /**
      * Checks to see if the title prompt ("press to start") should be added.
      */
@@ -88,12 +107,16 @@ public class MainMenu extends World
     private void checkStart() {
         if (Greenfoot.isKeyDown("enter")) {
             manager.fadeOut(fadeDuration);
+            //bkgMusic.stop();//stops the music when you press enter
         }
         if (manager.isFadedOut()) {
-            Greenfoot.setWorld(new Map());
+            Greenfoot.setWorld(new CutScene01());
         }
+        if (Greenfoot.isKeyDown("j"))
+        {
+            Greenfoot.setWorld(new Jaz());
     }
-
+}
     @Override
     public void act() {
         checkPrompt();

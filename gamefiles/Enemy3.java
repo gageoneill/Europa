@@ -11,16 +11,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy3 extends NPC
 {   
-    
+    boolean isTracking;
+   
     /**
      * Creates a new enemy, setting up physics.
      */
-    public Enemy3() {
+    public Enemy3(boolean track) {
+        isTracking = track;
         setAngularDamping(0.9);
-        setMaxAngularSpeed(10);
-        setMaxSpeed(2);
+        setMaxAngularSpeed(8);
+        setMaxSpeed(.5);
         setRotation(Greenfoot.getRandomNumber(360));
         increaseVelocityPolar(1, getRotation());
+        
     }
     
     /**
@@ -28,28 +31,23 @@ public class Enemy3 extends NPC
      * If touching a player shot, destroy self and drop an item.
      */
     public void act() {
-        super.act();
+        
         
         // Move randomly...
         increaseAngularVelocity((Math.random() * 2) - 1);
+        if(isTracking)
+        {
+            trackPlayer();
+        }
+        if(!isTracking)
+        {
+            increaseVelocityPolar(1, getPreciseRotation());
+        }
         increaseVelocityPolar(1, getPreciseRotation());
         // ...but don't stray too far from the center.
         increaseVelocity((getWorld().getWidth() / 2 - getX()) * 0.002, (getWorld().getHeight() / 2 - getY()) * 0.002);
-    
-        if (isTouching(Shot.class)) {
-            // Drop an item.
-            World w = getWorld();
-            
-            // Get a random type of item to drop: either 0 or 1.
-            int type = Greenfoot.getRandomNumber(2); // Z[0, 2) == Z[0, 1]
-            if (type == 0) {
-                dropItem(new Grow());
-            } else {
-                dropItem(new Shrink());
-            }
-            
-            // Die.
-            w.removeObject(this);
-        }
-    }    
+       
+        super.act();
+    } 
+
 }
